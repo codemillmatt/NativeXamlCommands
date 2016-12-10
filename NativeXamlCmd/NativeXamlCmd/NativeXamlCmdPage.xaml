@@ -1,17 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage 
-		xmlns="http://xamarin.com/schemas/2014/forms" 
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-		xmlns:iOS="clr-namespace:NativeXamlCmd.iOS;assembly=NativeXamlCmd.iOS;targetPlatform=iOS"
-		xmlns:droid="clr-namespace:NativeXamlCmd.Droid;assembly=NativeXamlCmd.Droid;TargetPlatform=Android"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:iOS="clr-namespace:NativeXamlCmd.iOS;assembly=NativeXamlCmd.iOS;targetPlatform=iOS" 
+		xmlns:droid="clr-namespace:NativeXamlCmd.Droid;assembly=NativeXamlCmd.Droid;targetPlatform=Android" 
 		xmlns:local="clr-namespace:NativeXamlCmd" 
 		x:Class="NativeXamlCmd.NativeXamlCmdPage">
 	<StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 		<Label Text="Tap the button to see something cool!" HorizontalTextAlignment="Center" />
-		<iOS:NativeXamlCmdButton Command="{Binding ShowModalCommand}"
-				View.HorizontalOptions="Center" View.VerticalOptions="Center" />
-		<droid:NativeXamlCmdButton Command="{Binding ShowModalCommand}"
-				View.HorizontalOptions="Center" View.VerticalOptions="Center" />
+		<iOS:NativeXamlCmdButton Command="{Binding ShowModalCommand}" 
+			View.HorizontalOptions="Center" View.VerticalOptions="Center" />
+		<droid:NativeXamlCmdButton Command="{Binding ShowModalCommand}" 
+			View.HorizontalOptions="Center" View.VerticalOptions="Center" />
 		<Label Text="The switch will enable or disable the droid FAB (via commanding!!)" HorizontalTextAlignment="Center" />
 		<Switch HorizontalOptions="Center" VerticalOptions="Center" IsToggled="{Binding CanShowModal}" />
 	</StackLayout>

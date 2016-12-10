@@ -20,8 +20,6 @@ namespace NativeXamlCmd.Droid
 				if (canExecute)
 					Command?.Execute(null);
 			};
-
-
 		}
 
 		protected override void OnAttachedToWindow()

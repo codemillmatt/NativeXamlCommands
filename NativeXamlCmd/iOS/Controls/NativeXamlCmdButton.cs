@@ -3,16 +3,16 @@ using Xamarin.Forms;
 
 namespace NativeXamlCmd.iOS
 {
-	public class NativeXamlCmdButton : FabButton
-	{
-		public Command Command { get; set; }
+public class NativeXamlCmdButton : FabButton
+{
+	public Command Command { get; set; }
 
-		public NativeXamlCmdButton()
+	public NativeXamlCmdButton()
+	{
+		ButtonPressed += (sender, e) =>
 		{
-			ButtonPressed += (sender, e) =>
-			{
-				Command?.Execute(null);
-			};
-		}
+			Command?.Execute(null);
+		};
 	}
+}
 }
